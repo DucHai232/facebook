@@ -2,3 +2,8 @@
     padding: 0;
     margin: 0;
 }
+:root {
+    --primary-color: #0464b9;
+    --size-xl: 18px;
+}
+
