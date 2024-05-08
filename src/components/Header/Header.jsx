@@ -10,6 +10,7 @@ import ExtensionIcon from "@mui/icons-material/Extension";
 import { Avatar } from "@mui/material";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import image from "../../assets/image/images.jpg";
 const Header = () => {
   const listIcon = [
     {
@@ -39,7 +40,7 @@ const Header = () => {
     },
   ];
   const newList = [...listIcon];
-  console.log(newList);
+
   return (
     <>
       <div className="header-container">
@@ -59,21 +60,16 @@ const Header = () => {
         <div className="header-icon">
           <ul>
             {/* class= list storeicon */}
-            {check &&
-              listIcon.map((icon) => (
-                <li key={icon.id} className={`list ${icon.class}`}>
-                  <icon.item />
-                </li>
-              ))}
+            {listIcon.map((icon) => (
+              <li key={icon.id} className={`list ${icon.class}`}>
+                <icon.item />
+              </li>
+            ))}
           </ul>
         </div>
         <div className="header-alert">
           <div className="header-alert_profile">
-            <Avatar
-              alt="Remy Sharp"
-              src="https://yt3.googleusercontent.com/-CFTJHU7fEWb7BYEb6Jh9gm1EpetvVGQqtof0Rbh-VQRIznYYKJxCaqv_9HeBcmJmIsp2vOO9JU=s900-c-k-c0x00ffffff-no-rj"
-            />
-
+            <Avatar alt="Remy Sharp" src={image} />
             <span className="profile-name">Duc hai</span>
           </div>
           <div className="header-alert_communicate">
