@@ -7,6 +7,8 @@
 .lefthome-container{
    width: 25%;
     padding: 10px;
+    overflow-y: scroll;
+    height: calc(100vh - 100px);
 }
 
 .topleft{
@@ -30,7 +32,7 @@
     font-size: var(--size-l);
 }
 
-.btn-see-more{
+.topleft .btn-see-more{
     width: 80%;
     border: none;
     background-color: lightgray;
@@ -75,3 +77,16 @@
 .bottomleft .text {
     font-weight: bold;
 }
+
+.bottomleft .btn-see-more{
+    width: 80%;
+    border: none;
+    background-color: lightgray;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
