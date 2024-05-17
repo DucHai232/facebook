@@ -7,6 +7,8 @@ body{
 }
 :root {
     --primary-color: #0464b9;
+    --bg-color: rgb(233, 233, 233);
+    --border-color: rgb(240, 240, 240);
     --size-xl: 22px;
     --size-l: 18px;
 }

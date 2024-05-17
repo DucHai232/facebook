@@ -19,12 +19,14 @@ const Stories = () => {
     setStoriesWidth(storiesWidth); //lưu lại độ dài stories
     handleScroll(parentWidth, storiesWidth, position);
   }, [position]);
-  //-200 -200 -200 -200
-  //1114 - -4 *200 < 1850 // 1914 > 1850
+
+  //parentWidth: 1114, storiesWidth: 1850
   const handleScroll = (containerWidth, storiesWidth, position) => {
-    setLeftButton(position < 0); //true false
-    setRightButton(containerWidth - position < storiesWidth); //true false
+    setLeftButton(position < 0); //false true
+    setRightButton(containerWidth - position < storiesWidth); //true true true false
   };
+
+  //1114 - (-200-200-200-200) < 1850
   const styleStory = (urlImage) => {
     return {
       position: "relative",
@@ -38,6 +40,7 @@ const Stories = () => {
       flex: "0 0 auto",
     };
   };
+
   const handleScrollLeft = () => {
     setPosition((prev) => prev + space);
   };
@@ -57,7 +60,6 @@ const Stories = () => {
           <ArrowForwardIosIcon />
         </div>
       )}
-
       <div
         className="stories"
         style={{ transform: `translateX(${position}px)` }}
